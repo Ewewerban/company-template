@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company One-Pager</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+
+<script>
+// ============================================
+// CONFIG - EDYTUJ TYLKO TO
+// ============================================
+const config = {
+  companyName: "YOUR-COMPANY-NAME",
+  tagline: "YOUR-TAGLINE-HERE",
+  yearFounded: "2010",
+  
+  // Formspree + reCAPTCHA - WYMAGANE
+  formspreeEndpoint: "https://formspree.io/f/YOUR-FORM-ID",
+  recaptchaSiteKey: "YOUR-RECAPTCHA-SITE-KEY",
+  thankYouPage: "thanks.html",
+  
+  primaryColor: "#2563EB",
+  
+  email: "YOUR-EMAIL@EXAMPLE.COM",
+  phone: "+48 123 456 789",
+  
+  products: [
+    {
+      name: "Product Category 1",
+      image: "assets/product1.jpg",
+      description: "Short description of your main product line."
+    },
+    {
+      name: "Product Category 2", 
+      image: "assets/product2.jpg",
+      description: "Short description of second product line."
+    },
+    {
+      name: "Product Category 3",
+      image: "assets/product3.jpg", 
+      description: "Short description of third product line."
+    }
+  ],
+  
+  certifications: [
+    { name: "ISO 9001", image: "assets/cert-iso.jpg" },
+    { name: "CE Certificate", image: "assets/cert-ce.jpg" }
+  ],
+  
+  advantages: [
+    "YOUR-ADVANTAGE-1-TEXT",
+    "Estimated delivery time: 30-45 days by sea. Times may vary due to customs.",
+    "YOUR-ADVANTAGE-3-TEXT"
+  ]
+}
+</script>
+
+<nav class="navbar">
+  <div class="logo" id="nav-logo"></div>
+  <a href="#contact" class="btn-nav">Get Quote</a>
+</nav>
+
+<section class="hero">
+  <h1 id="hero-title"></h1>
+  <p id="hero-tagline"></p>
+  <a href="#contact" class="btn-nav">Contact Us</a>
+</section>
+
+<section id="why-us">
+  <div class="container">
+    <h2>Why Choose Us</h2>
+    <div class="grid-3" id="advantages-grid"></div>
+  </div>
+</section>
+
+<section id="products">
+  <div class="container">
+    <h2>Our Products</h2>
+    <div class="grid-3" id="products-grid"></div>
+  </div>
+</section>
+
+<section id="certifications">
+  <div class="container">
+    <h2>Certifications</h2>
+    <div class="grid-3" id="certs-grid"></div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <h2>Request a Quote</h2>
+    <div class="contact-wrapper">
+      <form id="contact-form" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <input type="text" name="company" placeholder="Company Name">
+        <textarea name="message" rows="5" placeholder="What products are you looking for? Quantity?" required></textarea>
+        
+        <!-- Formspree ukryte pola -->
+        <input type="hidden" name="_subject" value="New inquiry from website">
+        <input type="hidden" name="_next" id="redirect-url">
+        
+        <!-- reCAPTCHA -->
+        <div class="g-recaptcha" id="recaptcha"></div>
+        
+        <button type="submit" class="btn-nav">Send Inquiry</button>
+      </form>
+      
+      <div class="contact-info">
+        <h3>Direct Contact</h3>
+        <p><strong>Email:</strong> <span id="contact-email"></span></p>
+        <p><strong>Phone:</strong> <span id="contact-phone"></span></p>
+        <p><strong>Founded:</strong> <span id="contact-founded"></span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 <span id="footer-company"></span>. All rights reserved.</p>
+</footer>
+
+<script>
+// ============================================
+// RENDER - Don't touch
+// ============================================
+document.documentElement.style.setProperty('--primary', config.primaryColor);
+
+// Nav + Hero
+document.getElementById('nav-logo').textContent = config.companyName;
+document.getElementById('hero-title').textContent = config.companyName;
+document.getElementById('hero-tagline').textContent = config.tagline;
+
+// Advantages
+const advGrid = document.getElementById('advantages-grid');
+config.advantages.forEach(text => {
+  advGrid.innerHTML += `<div class="card"><p>${text}</p></div>`;
+});
+
+// Products
+const prodGrid = document.getElementById('products-grid');
+config.products.forEach(p => {
+  prodGrid.innerHTML += `
+    <div class="card">
+      <img src="${p.image}" alt="${p.name}" style="width:100%; height:200px; object-fit:cover; border-radius:8px; margin-bottom:16px;">
+      <h3>${p.name}</h3>
+      <p>${p.description}</p>
+    </div>
+  `;
+});
+
+// Certifications
+const certGrid = document.getElementById('certs-grid');
+config.certifications.forEach(c => {
+  certGrid.innerHTML += `
+    <div class="card">
+      <img src="${c.image}" alt="${c.name}" style="width:100%; height:150px; object-fit:contain; margin-bottom:16px;">
+      <h3>${c.name}</h3>
+    </div>
+  `;
+});
+
+// Contact
+document.getElementById('contact-email').textContent = config.email;
+document.getElementById('contact-phone').textContent = config.phone;
+document.getElementById('contact-founded').textContent = config.yearFounded;
+document.getElementById('footer-company').textContent = config.companyName;
+
+// Form setup + przekierowanie
+const form = document.getElementById('contact-form');
+form.action = config.formspreeEndpoint;
+document.getElementById('redirect-url').value = config.thankYouPage;
+document.getElementById('recaptcha').setAttribute('data-sitekey', config.recaptchaSiteKey);
+
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+  });
+});
+</script>
+
+</body>
+</html>
