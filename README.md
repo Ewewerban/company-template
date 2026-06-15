@@ -1,15 +1,31 @@
-# 🏢 Premium Corporate & Import Business Landing Page Template
+# 🏢 Standard B2B Sourcing & Corporate Agency Landing Page Boilerplate
 
-A clean, responsive, high-converting agency business landing page boilerplate inspired by professional global sourcing, cross-border trade, and import service portals. Fully componentized with abstract variables like `COMPANY-NAME`.
+A clean, production-ready, fully responsive landing page boilerplate engine tailored for complex corporate layouts, multinational agencies, import-export representations, and commercial distribution organizations.
 
-## ⚙️ Features & Structural Blocks
-- 💎 **Elegant Typography Contrast:** Uses a professional combination of modern geometric headlines (`Montserrat`) paired with elegant italic subtitles (`Lora`).
-- ⏱️ **Fully Coded History Timeline:** Includes a centralized, alternate responsive timeline tree complete with cyclical image nodes and an interactive summary bubble.
-- 🗺️ **World-Grid Form Layout:** Features a dark contact framework optimized for industrial enterprise leads.
-- ⚡ **Zero Framework Dependencies:** Written in standard HTML5 and responsive Vanilla CSS. No NPM installs or compilation required.
+---
 
-## 🚀 Setup Instructions
-1. Download or clone this directory.
-2. Use a code editor to find-and-replace `COMPANY-NAME`, `SERVICE-TITLE`, and personal asset links within `index.html`.
-3. Drop real visual files into the root directory mapping to `hero-bg.jpg`, `placeholder-product1.jpg`, etc.
-4. Host instantly on **GitHub Pages** directly from your root directory branch.
+## 📸 Preview
+
+![Boilerplate Live Layout](preview.png)
+
+---
+
+## ⚡ Structural UI Elements Included
+- **Componentized Typography Stack:** Geometric layout headlines mapped to `Montserrat` contrasted against elegant font layout elements handled by `Lora`.
+- **Centralized Alternate History Tree:** Full CSS framework infrastructure rendering vertical nodes, target circular avatar frames, and a modular final call-to-action milestone badge.
+- **Dotted Lead Capture Grid:** Inverted block interface rendering side-by-side content fields mapped to structured enterprise contact briefs.
+- **Flat Asset Linkages:** Clean root path layout (`logo.png`, `preview.png`) ensuring total link immunity on deployment servers like GitHub Pages.
+
+---
+
+## 🚀 How to Customize This Template
+
+All target text variables inside `index.html` are bounded by global abstract parameters wrapped in brackets like `[COMPANY_NAME]`.
+
+1. Open `index.html` inside your text editor environment.
+2. Execute a global search-and-replace for the marker tags:
+   - Replace `[COMPANY_NAME]` with your entity's legitimate naming structure.
+   - Replace `[HERO_MAIN_HEADING]` with your corporate value proposition slogan.
+   - Adjust `[SERVICE_1_TITLE]` through `[SERVICE_3_TITLE]` to map your operational specialties.
+3. Replace the local fallback files (`logo.png`, `portfolio-1.jpg`, `hero-bg.jpg`) in the master folder with your target graphical files.
+4. Turn on your personal web hosting or link the directory source to the master line on **GitHub Pages**.
