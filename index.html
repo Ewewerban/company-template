@@ -1,191 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Company One-Pager</title>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COMPANY-NAME | Corporate & Import Services Template</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400;1,500&family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<script>
-// ============================================
-// CONFIG - EDYTUJ TYLKO TO
-// ============================================
-const config = {
-  companyName: "YOUR-COMPANY-NAME",
-  tagline: "YOUR-TAGLINE-HERE",
-  yearFounded: "2010",
-  
-  // Formspree + reCAPTCHA - WYMAGANE
-  formspreeEndpoint: "https://formspree.io/f/YOUR-FORM-ID",
-  recaptchaSiteKey: "YOUR-RECAPTCHA-SITE-KEY",
-  thankYouPage: "thanks.html",
-  
-  primaryColor: "#2563EB",
-  
-  email: "YOUR-EMAIL@EXAMPLE.COM",
-  phone: "+48 123 456 789",
-  
-  products: [
-    {
-      name: "Product Category 1",
-      image: "assets/product1.jpg",
-      description: "Short description of your main product line."
-    },
-    {
-      name: "Product Category 2", 
-      image: "assets/product2.jpg",
-      description: "Short description of second product line."
-    },
-    {
-      name: "Product Category 3",
-      image: "assets/product3.jpg", 
-      description: "Short description of third product line."
-    }
-  ],
-  
-  certifications: [
-    { name: "ISO 9001", image: "assets/cert-iso.jpg" },
-    { name: "CE Certificate", image: "assets/cert-ce.jpg" }
-  ],
-  
-  advantages: [
-    "YOUR-ADVANTAGE-1-TEXT",
-    "Estimated delivery time: 30-45 days by sea. Times may vary due to customs.",
-    "YOUR-ADVANTAGE-3-TEXT"
-  ]
-}
-</script>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">COMPANY-NAME</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#timeline">Timeline</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact" class="nav-accent-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-<nav class="navbar">
-  <div class="logo" id="nav-logo"></div>
-  <a href="#contact" class="btn-nav">Get Quote</a>
-</nav>
+    <header class="hero" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-container">
+            <p class="hero-lead-in">Let's do some business together!</p>
+            <h1 class="hero-title">WELCOME</h1>
+            <a href="#services" class="btn btn-accent">TELL ME MORE</a>
+        </div>
+    </header>
 
-<section class="hero">
-  <h1 id="hero-title"></h1>
-  <p id="hero-tagline"></p>
-  <a href="#contact" class="btn-nav">Contact Us</a>
-</section>
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>SERVICES</h2>
+                <p class="section-subtitle">We can provide a variety of services, which will suit your needs</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon-wrapper">
+                        <span class="service-icon">💼</span>
+                    </div>
+                    <h3>SERVICE-TITLE-ONE</h3>
+                    <p>Detailed description of your first business operations service. Explain how you assist your clients, manage transactions, and deliver end-to-end solutions.</p>
+                </div>
 
-<section id="why-us">
-  <div class="container">
-    <h2>Why Choose Us</h2>
-    <div class="grid-3" id="advantages-grid"></div>
-  </div>
-</section>
+                <div class="service-card">
+                    <div class="service-icon-wrapper">
+                        <span class="service-icon">✈️</span>
+                    </div>
+                    <h3>SERVICE-TITLE-TWO</h3>
+                    <p>Detailed description of your second core offering (e.g., representation, trade fair support). Mention specialized intelligence reports and market insights.</p>
+                </div>
 
-<section id="products">
-  <div class="container">
-    <h2>Our Products</h2>
-    <div class="grid-3" id="products-grid"></div>
-  </div>
-</section>
+                <div class="service-card">
+                    <div class="service-icon-wrapper">
+                        <span class="service-icon">🚢</span>
+                    </div>
+                    <h3>SERVICE-TITLE-THREE</h3>
+                    <p>Detailed description of your third core service (e.g., quality assurance, logistics). Explain inspection stages, factory audits, and standard verification.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section id="certifications">
-  <div class="container">
-    <h2>Certifications</h2>
-    <div class="grid-3" id="certs-grid"></div>
-  </div>
-</section>
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-header">
+                <h2>PORTFOLIO</h2>
+                <p class="section-subtitle">Some of the products from our production</p>
+            </div>
 
-<section id="contact">
-  <div class="container">
-    <h2>Request a Quote</h2>
-    <div class="contact-wrapper">
-      <form id="contact-form" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <input type="text" name="company" placeholder="Company Name">
-        <textarea name="message" rows="5" placeholder="What products are you looking for? Quantity?" required></textarea>
-        
-        <!-- Formspree ukryte pola -->
-        <input type="hidden" name="_subject" value="New inquiry from website">
-        <input type="hidden" name="_next" id="redirect-url">
-        
-        <!-- reCAPTCHA -->
-        <div class="g-recaptcha" id="recaptcha"></div>
-        
-        <button type="submit" class="btn-nav">Send Inquiry</button>
-      </form>
-      
-      <div class="contact-info">
-        <h3>Direct Contact</h3>
-        <p><strong>Email:</strong> <span id="contact-email"></span></p>
-        <p><strong>Phone:</strong> <span id="contact-phone"></span></p>
-        <p><strong>Founded:</strong> <span id="contact-founded"></span></p>
-      </div>
-    </div>
-  </div>
-</section>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <div class="portfolio-img-box">
+                        <img src="placeholder-product1.jpg" alt="PRODUCT-ONE-NAME" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%\' height=\'100%\' viewBox=\'0 0 100 100\'><rect width=\'100%\' height=\'100%\' fill=\'%23eee\'/><text x=\'50%\' y=\'50%\' font-family=\'sans-serif\' font-size=\'10\' text-anchor=\'middle\' fill=\'%23aaa\'>PRODUCT-IMAGE</text></svg>';">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Product Category One</h3>
+                        <p>Product Tag/Subtext</p>
+                    </div>
+                </div>
 
-<footer>
-  <p>© 2026 <span id="footer-company"></span>. All rights reserved.</p>
-</footer>
+                <div class="portfolio-item">
+                    <div class="portfolio-img-box">
+                        <img src="placeholder-product2.jpg" alt="PRODUCT-TWO-NAME" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%\' height=\'100%\' viewBox=\'0 0 100 100\'><rect width=\'100%\' height=\'100%\' fill=\'%23eee\'/><text x=\'50%\' y=\'50%\' font-family=\'sans-serif\' font-size=\'10\' text-anchor=\'middle\' fill=\'%23aaa\'>PRODUCT-IMAGE</text></svg>';">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Product Category Two</h3>
+                        <p>Product Tag/Subtext</p>
+                    </div>
+                </div>
 
-<script>
-// ============================================
-// RENDER - Don't touch
-// ============================================
-document.documentElement.style.setProperty('--primary', config.primaryColor);
+                <div class="portfolio-item">
+                    <div class="portfolio-img-box">
+                        <img src="placeholder-product3.jpg" alt="PRODUCT-THREE-NAME" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%\' height=\'100%\' viewBox=\'0 0 100 100\'><rect width=\'100%\' height=\'100%\' fill=\'%23eee\'/><text x=\'50%\' y=\'50%\' font-family=\'sans-serif\' font-size=\'10\' text-anchor=\'middle\' fill=\'%23aaa\'>PRODUCT-IMAGE</text></svg>';">
+                    </div>
+                    <div class="portfolio-info">
+                        <h3>Product Category Three</h3>
+                        <p>Product Tag/Subtext</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-// Nav + Hero
-document.getElementById('nav-logo').textContent = config.companyName;
-document.getElementById('hero-title').textContent = config.companyName;
-document.getElementById('hero-tagline').textContent = config.tagline;
-
-// Advantages
-const advGrid = document.getElementById('advantages-grid');
-config.advantages.forEach(text => {
-  advGrid.innerHTML += `<div class="card"><p>${text}</p></div>`;
-});
-
-// Products
-const prodGrid = document.getElementById('products-grid');
-config.products.forEach(p => {
-  prodGrid.innerHTML += `
-    <div class="card">
-      <img src="${p.image}" alt="${p.name}" style="width:100%; height:200px; object-fit:cover; border-radius:8px; margin-bottom:16px;">
-      <h3>${p.name}</h3>
-      <p>${p.description}</p>
-    </div>
-  `;
-});
-
-// Certifications
-const certGrid = document.getElementById('certs-grid');
-config.certifications.forEach(c => {
-  certGrid.innerHTML += `
-    <div class="card">
-      <img src="${c.image}" alt="${c.name}" style="width:100%; height:150px; object-fit:contain; margin-bottom:16px;">
-      <h3>${c.name}</h3>
-    </div>
-  `;
-});
-
-// Contact
-document.getElementById('contact-email').textContent = config.email;
-document.getElementById('contact-phone').textContent = config.phone;
-document.getElementById('contact-founded').textContent = config.yearFounded;
-document.getElementById('footer-company').textContent = config.companyName;
-
-// Form setup + przekierowanie
-const form = document.getElementById('contact-form');
-form.action = config.formspreeEndpoint;
-document.getElementById('redirect-url').value = config.thankYouPage;
-document.getElementById('recaptcha').setAttribute('data-sitekey', config.recaptchaSiteKey);
-
-// Smooth scroll
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-  });
-});
-</script>
-
-</body>
-</html>
+    <section class="about" id="about">
+        <div class="container container-narrow">
+            <div class="section-header">
+                <h2>ABOUT SHORT-NAME</h2>
+                <p class="section-subtitle">Your Company Mission Statement Placeholder</p>
+            </div>
+            <div class="about-text-content">
+                <p>Introduce your company core mission here. Describe
