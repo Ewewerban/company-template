@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COMPANY-NAME | Corporate & Import Services Template</title>
+    <title>[COMPANY_NAME] | Professional Business Template</title>
     <link rel="stylesheet" href="style.css">
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400;1,500&family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -14,7 +15,8 @@
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <span class="logo-text">COMPANY-NAME</span>
+                <img src="logo.png" alt="[COMPANY_NAME]" class="logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <span class="logo-text-fallback" style="display:none;">[COMPANY_NAME]</span>
             </div>
             <ul class="nav-links">
                 <li><a href="#services">Services</a></li>
@@ -22,7 +24,7 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#timeline">Timeline</a></li>
                 <li><a href="#team">Team</a></li>
-                <li><a href="#contact" class="nav-accent-link">Contact</a></li>
+                <li><a href="#contact" class="nav-btn-highlight">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -30,42 +32,36 @@
     <header class="hero" id="hero">
         <div class="hero-overlay"></div>
         <div class="hero-container">
-            <p class="hero-lead-in">Let's do some business together!</p>
-            <h1 class="hero-title">WELCOME</h1>
-            <a href="#services" class="btn btn-accent">TELL ME MORE</a>
+            <p class="hero-sub">[HERO_SUBTITLE_OR_GREETING]</p>
+            <h1 class="hero-main">[HERO_MAIN_HEADING]</h1>
+            <a href="#services" class="btn btn-accent">[PRIMARY_CTA_BUTTON]</a>
         </div>
     </header>
 
     <section class="services" id="services">
         <div class="container">
             <div class="section-header">
-                <h2>SERVICES</h2>
-                <p class="section-subtitle">We can provide a variety of services, which will suit your needs</p>
+                <h2>[SERVICES_SECTION_TITLE]</h2>
+                <p class="section-desc-italic">[Services sub-heading description or corporate value proposition statement]</p>
             </div>
             
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon-wrapper">
-                        <span class="service-icon">💼</span>
-                    </div>
-                    <h3>SERVICE-TITLE-ONE</h3>
-                    <p>Detailed description of your first business operations service. Explain how you assist your clients, manage transactions, and deliver end-to-end solutions.</p>
+                    <div class="icon-shape"><span class="card-emoji">💼</span></div>
+                    <h3>[SERVICE_1_TITLE]</h3>
+                    <p>[Detailed architectural brief explaining the first core operational service, workflow, and strategic benefits for the prospective enterprise client.]</p>
                 </div>
 
                 <div class="service-card">
-                    <div class="service-icon-wrapper">
-                        <span class="service-icon">✈️</span>
-                    </div>
-                    <h3>SERVICE-TITLE-TWO</h3>
-                    <p>Detailed description of your second core offering (e.g., representation, trade fair support). Mention specialized intelligence reports and market insights.</p>
+                    <div class="icon-shape"><span class="card-emoji">🌐</span></div>
+                    <h3>[SERVICE_2_TITLE]</h3>
+                    <p>[Detailed architectural brief explaining the second core operational service, workflow, and strategic benefits for the prospective enterprise client.]</p>
                 </div>
 
                 <div class="service-card">
-                    <div class="service-icon-wrapper">
-                        <span class="service-icon">🚢</span>
-                    </div>
-                    <h3>SERVICE-TITLE-THREE</h3>
-                    <p>Detailed description of your third core service (e.g., quality assurance, logistics). Explain inspection stages, factory audits, and standard verification.</p>
+                    <div class="icon-shape"><span class="card-emoji">⚙️</span></div>
+                    <h3>[SERVICE_3_TITLE]</h3>
+                    <p>[Detailed architectural brief explaining the third core operational service, workflow, and strategic benefits for the prospective enterprise client.]</p>
                 </div>
             </div>
         </div>
@@ -74,38 +70,38 @@
     <section class="portfolio" id="portfolio">
         <div class="container">
             <div class="section-header">
-                <h2>PORTFOLIO</h2>
-                <p class="section-subtitle">Some of the products from our production</p>
+                <h2>[PORTFOLIO_SECTION_TITLE]</h2>
+                <p class="section-desc-italic">[Sub-heading displaying gallery context or product classification parameters]</p>
             </div>
 
             <div class="portfolio-grid">
                 <div class="portfolio-item">
-                    <div class="portfolio-img-box">
-                        <img src="placeholder-product1.jpg" alt="PRODUCT-ONE-NAME" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%\' height=\'100%\' viewBox=\'0 0 100 100\'><rect width=\'100%\' height=\'100%\' fill=\'%23eee\'/><text x=\'50%\' y=\'50%\' font-family=\'sans-serif\' font-size=\'10\' text-anchor=\'middle\' fill=\'%23aaa\'>PRODUCT-IMAGE</text></svg>';">
+                    <div class="img-container-fallback">
+                        <img src="portfolio-1.jpg" alt="[ITEM_1_ALT]" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%\' height=\'100%\'><rect width=\'100%\' height=\'100%\' fill=\'%23e2e8f0\'/><text x=\'50%\' y=\'50%\' font-family=\'sans-serif\' font-size=\'12\' text-anchor=\'middle\' fill=\'%2364748b\'>portfolio-1.jpg</text></svg>';">
                     </div>
-                    <div class="portfolio-info">
-                        <h3>Product Category One</h3>
-                        <p>Product Tag/Subtext</p>
-                    </div>
-                </div>
-
-                <div class="portfolio-item">
-                    <div class="portfolio-img-box">
-                        <img src="placeholder-product2.jpg" alt="PRODUCT-TWO-NAME" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%\' height=\'100%\' viewBox=\'0 0 100 100\'><rect width=\'100%\' height=\'100%\' fill=\'%23eee\'/><text x=\'50%\' y=\'50%\' font-family=\'sans-serif\' font-size=\'10\' text-anchor=\'middle\' fill=\'%23aaa\'>PRODUCT-IMAGE</text></svg>';">
-                    </div>
-                    <div class="portfolio-info">
-                        <h3>Product Category Two</h3>
-                        <p>Product Tag/Subtext</p>
+                    <div class="portfolio-meta">
+                        <h3>[ITEM_1_HEADING]</h3>
+                        <p>[Item 1 Subtext / Tag]</p>
                     </div>
                 </div>
 
                 <div class="portfolio-item">
-                    <div class="portfolio-img-box">
-                        <img src="placeholder-product3.jpg" alt="PRODUCT-THREE-NAME" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%\' height=\'100%\' viewBox=\'0 0 100 100\'><rect width=\'100%\' height=\'100%\' fill=\'%23eee\'/><text x=\'50%\' y=\'50%\' font-family=\'sans-serif\' font-size=\'10\' text-anchor=\'middle\' fill=\'%23aaa\'>PRODUCT-IMAGE</text></svg>';">
+                    <div class="img-container-fallback">
+                        <img src="portfolio-2.jpg" alt="[ITEM_2_ALT]" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%\' height=\'100%\'><rect width=\'100%\' height=\'100%\' fill=\'%23e2e8f0\'/><text x=\'50%\' y=\'50%\' font-family=\'sans-serif\' font-size=\'12\' text-anchor=\'middle\' fill=\'%2364748b\'>portfolio-2.jpg</text></svg>';">
                     </div>
-                    <div class="portfolio-info">
-                        <h3>Product Category Three</h3>
-                        <p>Product Tag/Subtext</p>
+                    <div class="portfolio-meta">
+                        <h3>[ITEM_2_HEADING]</h3>
+                        <p>[Item 2 Subtext / Tag]</p>
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="img-container-fallback">
+                        <img src="portfolio-3.jpg" alt="[ITEM_3_ALT]" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%\' height=\'100%\'><rect width=\'100%\' height=\'100%\' fill=\'%23e2e8f0\'/><text x=\'50%\' y=\'50%\' font-family=\'sans-serif\' font-size=\'12\' text-anchor=\'middle\' fill=\'%2364748b\'>portfolio-3.jpg</text></svg>';">
+                    </div>
+                    <div class="portfolio-meta">
+                        <h3>[ITEM_3_HEADING]</h3>
+                        <p>[Item 3 Subtext / Tag]</p>
                     </div>
                 </div>
             </div>
@@ -113,10 +109,152 @@
     </section>
 
     <section class="about" id="about">
-        <div class="container container-narrow">
+        <div class="container text-container-narrow">
             <div class="section-header">
-                <h2>ABOUT SHORT-NAME</h2>
-                <p class="section-subtitle">Your Company Mission Statement Placeholder</p>
+                <h2>[ABOUT_SECTION_TITLE]</h2>
+                <p class="section-desc-italic">[Company high-level mission or core operating philosophy blueprint]</p>
             </div>
-            <div class="about-text-content">
-                <p>Introduce your company core mission here. Describe
+            <div class="about-rich-text">
+                <p>[First paragraph of text placeholder. Introduce corporate overview, organizational values, target demographic solutions, and market differentiators.]</p>
+                <p>[Second paragraph of text placeholder. Outline structural business strategy components, quality criteria safeguards, and operations scalability framework.]</p>
+                
+                <ul class="custom-bullet-list">
+                    <li><strong>[PILLAR_1_NAME]:</strong> [Briefly summarize core structural pillar or specific service execution guideline.]</li>
+                    <li><strong>[PILLAR_2_NAME]:</strong> [Briefly summarize core structural pillar or specific service execution guideline.]</li>
+                    <li><strong>[PILLAR_3_NAME]:</strong> [Briefly summarize core structural pillar or specific service execution guideline.]</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="timeline-block" id="timeline">
+        <div class="container">
+            <div class="section-header">
+                <h2>[TIMELINE_SECTION_TITLE]</h2>
+                <p class="section-desc-italic">[Short description summarizing corporate evolution steps or milestones]</p>
+            </div>
+
+            <div class="timeline-tree">
+                <div class="central-spine"></div>
+
+                <div class="timeline-node align-left">
+                    <div class="node-indicator-dot"></div>
+                    <div class="node-bubble">
+                        <span class="node-date">[DATE_1]</span>
+                        <h3>[MILESTONE_1_TITLE]</h3>
+                        <p>[Description block mapping out the historical breakthrough, company registration foundation, or technical branch launching parameters.]</p>
+                    </div>
+                    <div class="node-avatar-frame">
+                        <img src="timeline-1.jpg" alt="Timeline 1" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%\' height=\'100%\'><circle cx=\'50%\' cy=\'50%\' r=\'40%\' fill=\'%23cbd5e1\'/></svg>';">
+                    </div>
+                </div>
+
+                <div class="timeline-node align-right">
+                    <div class="node-indicator-dot"></div>
+                    <div class="node-avatar-frame">
+                        <img src="timeline-2.jpg" alt="Timeline 2" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%\' height=\'100%\'><circle cx=\'50%\' cy=\'50%\' r=\'40%\' fill=\'%23cbd5e1\'/></svg>';">
+                    </div>
+                    <div class="node-bubble">
+                        <span class="node-date">[DATE_2]</span>
+                        <h3>[MILESTONE_2_TITLE]</h3>
+                        <p>[Description block mapping out key expansions, signature enterprise acquisitions, trade platform setups, or scale execution accomplishments.]</p>
+                    </div>
+                </div>
+
+                <div class="timeline-node align-left">
+                    <div class="node-indicator-dot"></div>
+                    <div class="node-bubble">
+                        <span class="node-date">[DATE_3]</span>
+                        <h3>[MILESTONE_3_TITLE]</h3>
+                        <p>[Description block mapping out international scaling records, supply channel optimization thresholds, or major certification achievements.]</p>
+                    </div>
+                    <div class="node-avatar-frame">
+                        <img src="timeline-3.jpg" alt="Timeline 3" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%\' height=\'100%\'><circle cx=\'50%\' cy=\'50%\' r=\'40%\' fill=\'%23cbd5e1\'/></svg>';">
+                    </div>
+                </div>
+
+                <div class="timeline-end-cap">
+                    <div class="cap-ring">
+                        [END_CAP<br>TEXT<br>HERE]
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team" id="team">
+        <div class="container">
+            <div class="section-header">
+                <h2>[TEAM_SECTION_TITLE]</h2>
+                <p class="section-desc-italic">[Short baseline introduction detailing combined operational expertise levels]</p>
+            </div>
+
+            <div class="team-flex-wrapper">
+                <div class="member-card">
+                    <div class="avatar-circle">
+                        <img src="team-1.jpg" alt="[MEMBER_NAME]" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=\'100%\' height=\'100%\'><circle cx=\'50%\' cy=\'50%\' r=\'46%\' fill=\'%2394a3b8\'/></svg>';">
+                    </div>
+                    <h3>[MEMBER_NAME_PLACEHOLDER]</h3>
+                    <p class="member-title-label">[Corporate Role / Position Name]</p>
+                    
+                    <div class="member-social-channels">
+                        <a href="#" class="circle-sm-btn">f</a>
+                        <a href="#" class="circle-sm-btn">in</a>
+                    </div>
+                    
+                    <p class="member-description-bio">[Executive bio narrative block. List professional credentials, execution background history, market specialization, and direct corporate accountability fields.]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container text-container-narrow">
+            <div class="section-header invert-header-colors">
+                <h2>[CONTACT_SECTION_TITLE]</h2>
+                <p class="section-desc-italic">[Corporate direct channels fallback: generic-email@domain.com or +00 000 000 000]</p>
+            </div>
+
+            <form class="lead-capture-form" onsubmit="event.preventDefault(); alert('Form submitted successfully!');">
+                <div class="form-grid-split">
+                    <div class="inputs-stack">
+                        <div class="field-wrap">
+                            <input type="text" id="form-name" required placeholder="[NAME_PLACEHOLDER]*">
+                        </div>
+                        <div class="field-wrap">
+                            <input type="email" id="form-email" required placeholder="[EMAIL_PLACEHOLDER]*">
+                        </div>
+                        <div class="field-wrap">
+                            <input type="tel" id="form-phone" placeholder="[PHONE_PLACEHOLDER]">
+                        </div>
+                    </div>
+                    <div class="message-stack">
+                        <div class="field-wrap full-height-container">
+                            <textarea id="form-message" required placeholder="[MESSAGE_PLACEHOLDER]*"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-action-row">
+                    <button type="submit" class="btn btn-accent-submit">[SUBMIT_BUTTON_TEXT]</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-layout-split">
+            <div class="copyright-notice">
+                &copy; 2026 [COMPANY_NAME]. All rights reserved.
+            </div>
+            <div class="footer-social-hubs">
+                <a href="#" class="circle-sm-btn">f</a>
+                <a href="#" class="circle-sm-btn">in</a>
+            </div>
+            <div class="footer-legal-links">
+                <a href="#">[Privacy Policy Link]</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
